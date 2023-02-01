@@ -13,19 +13,23 @@
 	</properties>
 	<groupId>com.adoise.core</groupId>
 	<artifactId>com-adoise-core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>adoise-core</name>
 	<description>core app</description>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
-			<artifactId>com-adoise-api</artifactId>
-			<groupId>com.adoise.api</groupId>
+			<groupId>com.adoise.library</groupId>
+			<artifactId>com-adoise-library</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>

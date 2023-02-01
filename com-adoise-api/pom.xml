@@ -10,7 +10,7 @@
 	</parent>
 	<properties>
 		<java.version>11</java.version>
-	</properties>	
+	</properties>
 	<artifactId>com-adoise-api</artifactId>
 	<groupId>com.adoise.api</groupId>
 	<name>adoise-api</name>
@@ -19,12 +19,8 @@
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.adoise.library</groupId>
-			<artifactId>com-adoise-library</artifactId>
+			<groupId>com.adoise.core</groupId>
+			<artifactId>com-adoise-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
