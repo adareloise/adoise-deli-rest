@@ -1,5 +1,9 @@
 package com.adoise.library.entity;
 
+import com.adoise.library.base.AbstractData;
+import com.adoise.library.base.ORMEntity;
+import com.adoise.library.model.dto.RoleDto;
+import com.adoise.library.model.dto.UserDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Getter;
@@ -16,9 +20,11 @@ import java.util.List;
 @Entity
 @Table(name = "user_info")
 @JsonIgnoreProperties({"password"}) // Ignore password field.
-public class UserInfo {
+public class UserInfo implements ORMEntity {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -118,6 +124,30 @@ public class UserInfo {
 	public void removeRole(Role role) {
         this.roles.remove(role);
         role.getUsers().remove(role);
+    }
+    
+ 
+	@Override
+	public UserDto toDto() { 
+		UserDto dto = new UserDto();
+		
+		dto.setId(this.getId());
+		dto.setEmail(this.getEmail());
+		dto.setFirstName(this.getFirstName());
+		dto.setLastName(this.getLastName());
+		dto.setRoleDto((RoleDto) this.toDtoList (RoleDto.class, this.getRoles()));
+		
+		return dto;
+	}
+
+	public static UserInfo fromDto(UserDto dto) {
+	    
+    	UserInfo entity = new UserInfo();	
+    	entity.setEmail(dto.getEmail());
+    	entity.setFirstName(dto.getFirstName());
+    	entity.setLastName(dto.getLastName());
+    
+    	return entity;
     }
     
 }

@@ -5,7 +5,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import com.adoise.library.base.AbstractData;
+import com.adoise.library.base.ORMEntity;
 import com.adoise.library.enums.RoleEnum;
+import com.adoise.library.model.dto.RoleDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -17,9 +20,11 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Role {
+public class Role implements ORMEntity {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -77,4 +82,10 @@ public class Role {
         this.privileges.remove(privilege);
         privilege.getRoles().remove(this);
     }
+
+	@Override
+	public RoleDto toDto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+import com.adoise.library.base.AbstractData;
 import com.adoise.library.enums.PrivilegeEnum;
 import com.adoise.library.enums.RoleEnum;
 
@@ -15,8 +16,9 @@ import com.adoise.library.enums.RoleEnum;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class RoleDto {
+public class RoleDto implements AbstractData  {
 
+    private Long id;
     private RoleEnum roleEnum;
     private List<PrivilegeEnum> privilegeEnums;
 

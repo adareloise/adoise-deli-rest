@@ -6,23 +6,23 @@ import java.util.List;
 
 public interface ORMEntity extends Serializable {
 
-	AbstractData toVO ();
+	AbstractData toDto ();
 
 	default AbstractData toVO (boolean includeChildren) {
-		return this.toVO ();
+		return this.toDto ();
 	}
 
-	default <T extends AbstractData, Y extends ORMEntity> List<T> toVOList (Class<T> type, List<Y> entities) {
-		List<T> vos = new ArrayList<> ();
+	default <T extends AbstractData, Y extends ORMEntity> List<T> toDtoList (Class<T> type, List<Y> entities) {
+		List<T> dtos = new ArrayList<>();
 		if ((entities == null) || (entities.isEmpty ())) {
-			return vos;
+			return dtos;
 		}
 
 		for (ORMEntity entity : entities) {
-			vos.add (type.cast (entity.toVO ()));
+			dtos.add (type.cast (entity.toDto ()));
 		}
 
-		return vos;
+		return dtos;
 	}
 
 }

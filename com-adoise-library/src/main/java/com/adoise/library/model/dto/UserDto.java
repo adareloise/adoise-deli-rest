@@ -1,5 +1,7 @@
 package com.adoise.library.model.dto;
 
+import com.adoise.library.base.AbstractData;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -9,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class UserDto {
+public class UserDto implements AbstractData {
 
     private Long id;
     private String email;
