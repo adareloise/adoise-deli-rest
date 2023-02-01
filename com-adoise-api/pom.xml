@@ -12,9 +12,20 @@
 		<java.version>11</java.version>
 	</properties>	
 	<artifactId>com-adoise-api</artifactId>
+	<groupId>com.adoise.api</groupId>
 	<name>adoise-api</name>
 	<description>api rest</description>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.adoise.library</groupId>
+			<artifactId>com-adoise-library</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
