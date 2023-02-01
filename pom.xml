@@ -6,4 +6,10 @@
   <name>root</name>
   <description>base maven</description>
   <packaging>pom</packaging>
+
+  <modules>
+  	<module>com-adoise-core</module>
+  	<module>com-adoise-library</module>
+  	<module>com-adoise-api</module>
+  </modules>
 </project>
