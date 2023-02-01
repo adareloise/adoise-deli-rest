@@ -1,4 +1,4 @@
-package com.adoise.library.dto;
+package com.adoise.library.model;
 
 import javax.validation.constraints.Email;
 

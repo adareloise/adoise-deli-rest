@@ -3,7 +3,7 @@ package com.adoise.core.security;
 import com.adoise.core.jwt.JwtHelper;
 import com.adoise.core.jwt.util.JwtUtil;
 import com.adoise.library.constant.JwtConstant;
-import com.adoise.library.dto.AuthRequest;
+import com.adoise.library.model.AuthRequest;
 import com.adoise.library.model.JwtModel;
 import com.adoise.library.service.TokenService;
 import com.fasterxml.jackson.databind.ObjectMapper;
