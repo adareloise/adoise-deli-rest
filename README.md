@@ -1,4 +1,4 @@
-# Adareloise Delivery Rest 
+# adoise-deli-rest
 
 Simple overview of use/purpose.
 
@@ -37,8 +37,8 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+ex. David Utreras   
+ex. [@dutreras](https://www.linkedin.com/in/david-utreras/)
 
 ## Version History
 
