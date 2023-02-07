@@ -1,4 +1,4 @@
-# adoise-deli-rest
+# Adoise Deli Rest
 
 Backend application rest.
 
