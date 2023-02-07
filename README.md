@@ -1,6 +1,6 @@
 # adoise-deli-rest
 
-Simple overview of use/purpose.
+Backend application rest.
 
 ## Description
 
