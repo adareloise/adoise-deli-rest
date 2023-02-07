@@ -1,4 +1,4 @@
-package com.adoise.library.exception.handle;
+package com.adoise.api.exception.handle;
 
 
 import org.springframework.http.HttpStatus;
@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
 import com.adoise.library.exception.ExceptionResponse;
+import com.adoise.library.exception.global.DataException;
 import com.adoise.library.exception.global.PatchOperationNotSupported;
 
 import java.util.Date;
@@ -37,4 +38,23 @@ public class GlobalRestControllerAdvice {
 
         return new ResponseEntity<Object>(exceptionResponse,HttpStatus.BAD_REQUEST);
     }
+    
+    /**
+     * Data access exception.
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(DataException.class)
+    public ResponseEntity<Object> dataException(Exception ex, WebRequest request) {
+    	
+        ExceptionResponse exceptionResponse = new ExceptionResponse(
+				new Date(), 
+				ex.getMessage(), 
+				request.getDescription(false));
+
+        return new ResponseEntity<Object>(exceptionResponse,HttpStatus.BAD_REQUEST);
+    }
+    
+    
 }
