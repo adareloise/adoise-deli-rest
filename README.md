@@ -37,8 +37,8 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. David Utreras   
-ex. [@dutreras](https://www.linkedin.com/in/david-utreras/)
+David Utreras   
+[Linkedin](https://www.linkedin.com/in/david-utreras/)
 
 ## Version History
 
