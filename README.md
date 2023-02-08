@@ -10,8 +10,9 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
+* Maven
 * Java 11
-* Spring 2.5.7
+* Spring boot 2.5.7
 
 ### Installing
 
