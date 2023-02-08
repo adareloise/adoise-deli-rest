@@ -1,6 +1,6 @@
 # Adoise Deli Rest
 
-Backend application rest.
+Backend Spring Boot Api rest.
 
 ## Description
 
@@ -11,6 +11,7 @@ An in-depth paragraph about your project and overview of use.
 ### Dependencies
 
 * Java 11
+* Spring 2.5.7
 
 ### Installing
 
